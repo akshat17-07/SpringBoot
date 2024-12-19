@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import com.game.spring.learn_spring_framework.game.GamingConsole;
+import com.game.spring.learn_spring_framework.enterprise.MyWebController;
 import com.game.spring.learn_spring_framework.game.GameRunner;
 import com.game.spring.learn_spring_framework.game.MarioGame;
 import com.game.spring.learn_spring_framework.game.PacmanGame;
@@ -24,5 +25,8 @@ public class LearnSpringFrameworkApplication {
 		GameRunner runner = context.getBean(GameRunner.class);
 		
 		runner.run();	
+		
+		MyWebController controller = context.getBean(MyWebController.class);
+		System.out.println(controller.returnValueFromBusinessService());
 	}
 }
