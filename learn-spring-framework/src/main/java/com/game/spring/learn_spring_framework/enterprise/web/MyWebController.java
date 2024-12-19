@@ -11,9 +11,17 @@ import com.game.spring.learn_spring_framework.enterprise.BusinessService;
 @Component
 public class MyWebController {
 	
-	@Autowired
+	
 	private BusinessService businessService;
 	
+
+	@Autowired
+	public void setBusinessService(BusinessService businessService) {
+		this.businessService = businessService;
+	}
+
+
+
 	public long returnValueFromBusinessService() {
 		return businessService.calculateSum();
 	}

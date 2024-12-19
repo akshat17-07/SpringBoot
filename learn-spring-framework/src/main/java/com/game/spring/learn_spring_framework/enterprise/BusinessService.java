@@ -12,9 +12,17 @@ import com.game.spring.learn_spring_framework.enterprise.data.DataService;
 @Component
 public class BusinessService{
 	
-	@Autowired
+	
 	private DataService dataServices;
 	
+	@Autowired
+	public BusinessService(DataService dataServices) {
+		super();
+		this.dataServices = dataServices;
+	}
+
+
+
 	public long calculateSum() {
 		List<Integer> data = dataServices.getData();
 		return data.stream().reduce(Integer::sum).get();
