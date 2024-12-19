@@ -1,4 +1,4 @@
-package com.game.spring.learn_spring_framework.enterprise;
+package com.game.spring.learn_spring_framework.enterprise.data;
 
 import java.util.Arrays;
 import java.util.List;
